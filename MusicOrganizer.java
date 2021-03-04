@@ -97,9 +97,18 @@ public class MusicOrganizer
                 System.out.println(filename);
             }
             else{
-            System.out.println("Error, archivo no encontrado");
+                System.out.println("Error, archivo no encontrado");
             }
         }
     
     }
+    
+     public void playSamplesArtist(String artist) {
+        for(String file : files) {
+            if(file.contains(artist)) {
+               player.playSample(file); 
+            }
+        }
+    }
+
 }
