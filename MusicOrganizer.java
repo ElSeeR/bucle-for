@@ -108,7 +108,15 @@ public class MusicOrganizer
      public void playSamplesArtist(String artist) {
         for(String file : files) {
             if(file.contains(artist)) {
-               player.playSample(file); 
+               player.playSample(file);
+            }
+        }
+    }
+    
+    public void deleteSongsWithText(String canciones) {
+        for(String file : files) {
+            if(file.contains(canciones)) {
+               files.remove(file);
             }
         }
     }
