@@ -87,7 +87,7 @@ public class MusicOrganizer
         int position = 0;
         while (position < files.size()){ 
             String filename = files.get(position);
-            System.out.println(filename);
+            System.out.println(position + 1 + ". " + filename);
             position++;
         }
     }
