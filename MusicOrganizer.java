@@ -139,8 +139,8 @@ public class MusicOrganizer
             index++;
         }
         if (encontrado == false){
-            index = -1;
+            index = 0;
         }
-        return index;
+        return index - 1;
     }
 }
