@@ -112,7 +112,7 @@ public class MusicOrganizer
                player.playSample(file);
             }
         }
-    }
+     }
     
     public void deleteSongsWithText(String canciones) {
         for(String file : files) {
@@ -121,5 +121,26 @@ public class MusicOrganizer
             }
         }
     }
-
+    
+    /**
+    * Localiza el índice del primer archivo que se corresponde con
+    * la cadena de búsqueda indicada .
+    * @param searchString La cadena que hay que buscar.
+    * @return El índice de la primera aparición o -1 si
+    * no se encuentra ninguna correspondencia
+    */
+    public int findFirst(String searchString){
+        int index = 0;
+        boolean encontrado = false;
+        while ((index < files.size()) && (!encontrado)){
+            if (files.get(index).contains(searchString)){
+                encontrado = true;
+            }
+            index++;
+        }
+        if (encontrado == false){
+            index = -1;
+        }
+        return index;
+    }
 }
